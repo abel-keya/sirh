@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Auth;
 use App\User;
+use App\Role;
+use App\Department;
 
 class UsersController extends Controller
 {
@@ -20,7 +22,11 @@ class UsersController extends Controller
     {	
     	$user = Auth::user()->first();
 
-    	return view('main.account.account-edit', compact('user'));
+        $departments    = Department::get();
+
+        $roles          = Role::get();
+
+    	return view('main.account.account-edit', compact('user', 'departments', 'roles'));
     } 
 
     public function update(Request $request)

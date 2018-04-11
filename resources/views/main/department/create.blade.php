@@ -1,11 +1,10 @@
 @extends('template.index')
 
-@section('body')
-
+@section('body') 
   @include('main.partials.header')
   <!-- Left side column. contains the logo and sidebar -->
   @include('main.partials.aside')
-
+ 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -16,8 +15,8 @@
           <a href="{{ url('departments/view') }}">(Go Back)</a>
         </small>
       </h1> 
-    </section>
-
+    </section> 
+    
     <!-- Main content -->
     <section class="content">
       <!-- Info boxes -->

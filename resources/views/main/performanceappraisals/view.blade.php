@@ -1,7 +1,7 @@
 @extends('template.index')
 
 @section('body')
-
+<div class="wrapper">
 @include('main.partials.header')
 <!-- Left side column. contains the logo and sidebar -->
 @include('main.partials.aside')
@@ -12,9 +12,12 @@
   <section class="content-header">
     <h1>
       Performance Appraisals
-      <small>
-        <a href="{{ url('/performanceappraisal/create') }}">(create)</a>
-      </small>
+
+      @if(Auth::user()->hasRole('manager') && !Auth::user()->hasRole('administrator'))
+        <small>
+          <a href="{{ url('/performanceappraisal/create') }}">(create)</a>
+        </small> 
+      @endif 
     </h1> 
   </section>
 
@@ -186,8 +189,7 @@
           <!-- /.box-body -->
         </div>
         <!-- /.box -->
-      </div>
-    </div>
+      </div> 
 
   </section>
   <!-- /.content -->

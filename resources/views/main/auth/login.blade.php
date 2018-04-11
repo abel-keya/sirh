@@ -3,7 +3,7 @@
 @section('body')
 <div class="login-box">
     <div class="login-logo">
-        KevinHRIS</b></a>
+        KelvinHRIS</b></a>
     </div>
 
     <div class="login-box-body">

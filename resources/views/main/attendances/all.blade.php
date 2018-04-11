@@ -29,7 +29,7 @@
 
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title">Recent Check ins/outs (Check in time: 08:00)</h3>
+            <h3 class="box-title">Recent Check ins/outs (Check in time: 08:00 AM)</h3>
           </div>
           <!-- /.box-header -->
           <div class="box-body table-responsive no-padding">
@@ -72,8 +72,6 @@
                     @else 
                        (Pending Check Out)
                     @endif
-
-                    
                   </td> 
                 </tr>
                 @endforeach

@@ -90,7 +90,11 @@
             </a>
             <ul class="treeview-menu">
               <li><a href="{{ url('/performanceappraisals/view') }}">View All Appraisals</a></li>
-              <li><a href="{{ url('/performanceappraisal/create') }}">Create New Appraisal</a></li> 
+
+              @if(Auth::user()->hasRole('manager') && !Auth::user()->hasRole('administrator'))
+                <li><a href="{{ url('/performanceappraisal/create') }}">Create New Appraisal</a></li> 
+              @endif
+
             </ul>
           </li> 
         @endif

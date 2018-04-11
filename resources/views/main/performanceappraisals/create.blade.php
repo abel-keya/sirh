@@ -1,7 +1,7 @@
 @extends('template.index')
 
 @section('body')
-
+<div class="wrapper">
 @include('main.partials.header')
 <!-- Left side column. contains the logo and sidebar -->
 @include('main.partials.aside')
@@ -247,28 +247,24 @@
                  <button type="submit" class="btn btn-primary">Create Performance Appraisal</button>
               </div> 
 
-            </div>  
+            </div> 
+            </form> 
           </div> 
  
-        </form>
-      </div>
+        
+      </div> 
 
-
-
-
-    </div>
-  </div> 
+    </div> 
 
 </section>
 <!-- /.content -->
 </div>
-<!-- /.content-wrapper -->
+<!-- /.content-wrapper --> 
 
 @include('main.partials.footer')
 
 </div>
-<!-- ./wrapper -->
-
+<!-- ./wrapper --> 
 @include('main.partials.body-script')
 @stop 
 
