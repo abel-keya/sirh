@@ -109,7 +109,7 @@
   <!-- /.content -->
 </div>
 <!-- /.content-wrapper -->
-
+ 
 @include('main.partials.footer')
 
 </div>

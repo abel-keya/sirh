@@ -15,8 +15,7 @@ class LoginController extends Controller
         $this->validate($request, [
             'email'     => 'required|min:3|max:255',
             'password'  => 'required|min:8|max:255'
-        ]);
-
+        ]); 
 
         if(Auth::attempt($request->only(['email','password'])))
         {   

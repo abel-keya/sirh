@@ -71,7 +71,7 @@ class EmployeeController extends Controller
     	$user = User::create([
     		'name' 			    => $name,
     		'email' 		    => $email,
-    		'password' 		    => $password,
+    		'password' 		    => bcrypt($password),
     		'department_id'     => $department_id,
             'nationality'       => $nationality,
             'date_of_birth'     => $date_of_birth,
@@ -163,7 +163,7 @@ class EmployeeController extends Controller
     	$employee->update([
     		'name'                => $name,
             'email'             => $email,
-            'password'          => $password,
+            'password'          => bcrypt($password),
             'department_id'     => $department_id,
             'nationality'       => $nationality,
             'date_of_birth'     => $date_of_birth,

@@ -3,15 +3,15 @@
     <section class="sidebar"> 
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Main Navigation</li>
-        <li class="active">
+        <li id="dashboard" class="header">Main Navigation</li>
+        <li>
           <a href="{{ url('/dashboard') }}">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span> 
           </a> 
         </li>
  
         @if(Auth::user()->hasRole('administrator'))
-          <li class="treeview">
+          <li id="departments" class="treeview">
             <a href="#">
               <i class="fa fa-users"></i>
               <span>Departments</span>
@@ -27,7 +27,7 @@
         @endif
 
         @if(Auth::user()->hasRole('administrator') || Auth::user()->hasRole('manager'))
-          <li class="treeview">
+          <li id="employees" class="treeview">
             <a href="#">
               <i class="fa fa-users"></i>
               <span>Employees</span>
@@ -43,7 +43,7 @@
         @endif
 
         
-          <li class="treeview">
+          <li id="attendances" class="treeview">
             <a href="#">
               <i class="fa fa-folder"></i>
               <span>Attendances</span>
@@ -61,7 +61,7 @@
             </ul>
           </li>  
 
-          <li class="treeview">
+          <li id="leave" class="treeview">
             <a href="#">
               <i class="fa fa-folder"></i>
               <span>Leave</span>
@@ -80,7 +80,7 @@
           </li>
 
         @if(Auth::user()->hasRole('administrator') || Auth::user()->hasRole('manager'))
-          <li class="treeview">
+          <li id="appraisal" class="treeview">
             <a href="#">
               <i class="fa fa-folder"></i>
               <span>Performance Appraisals</span>

@@ -17,7 +17,7 @@ class AddColumnsToUsersTable extends Migration
               
             $table->string('nationality');
 
-            $table->string('date_of_birth');
+            $table->dateTime('date_of_birth');
 
             $table->string('gender');
 

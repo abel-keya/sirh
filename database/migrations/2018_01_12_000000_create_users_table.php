@@ -22,8 +22,6 @@ class CreateUsersTable extends Migration
 
             $table->integer('department_id')->unsigned()->index();
 
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('no action');
-
             $table->string('password');
 
             $table->rememberToken();

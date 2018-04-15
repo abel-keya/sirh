@@ -55,7 +55,7 @@
               @endif   
               
               <p>
-               Would you like to check out now on <strong>{{ Carbon\Carbon::now()->toDayDateTimeString() }}</strong>?
+               Would you like to check @if($attendance) out @else in @endif now on <strong>{{ Carbon\Carbon::now()->toDayDateTimeString() }}</strong>?
              </p>
              
              <div class="form-group"> 

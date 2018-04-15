@@ -45,30 +45,33 @@
                   <th>Employee Name</th> 
                   <th>Employee Email</th> 
                   <th>Department</th> 
-                  <th>Options</th> 
+                  <th>Roles</th>
+                  <th>Actions</th> 
                 </tr>
                 @foreach($employees as $key=>$employee)
                 <tr>
                   <td>{{ ++$key }}.</td>
                   <td>
-                    {{ $employee->name }}
+                    {{ $employee->name }} 
+                  </td>
+                  <td>{{ $employee->email }}</td> 
+                  <td>{{ $employee->department->name }}</td> 
+                  <td> 
                     @foreach($employee->roles as $role)
                       <span class="label label-success">
                         {{$role->name}}
                       </span> &nbsp;
                     @endforeach 
                   </td>
-                  <td>{{ $employee->email }}</td> 
-                  <td>{{ $employee->department->name }}</td> 
                   <td>
-                      {{-- <a href="#" data-toggle="modal" data-target="#modal-employee">
-                        <small class="label bg-green">View Employee</small>
-                      </a> --}}
+                      <a href="#" data-toggle="modal" data-target="#modal-employee">
+                        <small class="label bg-blue"><i class="fa fa-eye"></i></small> 
+                      </a> 
                       <a href="{{ url('employee/edit', $employee->id) }}">
-                        <small class="label bg-blue">Edit</small>
+                        <small class="label bg-blue"><i class="fa fa-edit"></i></small> 
                       </a>
                       <a href="{{ url('employee/delete', $employee->id) }}">
-                        <small class="label bg-red">Delete</small>
+                        <small class="label bg-red"><i class="fa fa-trash"></i></small> 
                       </a> 
                   </td> 
                 </tr>
@@ -80,7 +83,7 @@
                       <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span></button>
-                        <h3 class="modal-title text-center">Performance Appraisal</h3>
+                        <h3 class="modal-title text-center">Employee Information</h3>
                       </div>
                       <div class="modal-body">    
                               <div class="box-body">
