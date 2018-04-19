@@ -47,11 +47,7 @@
               <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
           </div> 
 
-          <br><br><br>
-
-          <div class="col-xs-4 col-md-12 text-center">
-            <a class="text-center" href="{{ url('/forgot/password') }}">I forgot my password</a>
-        </div>  
+          <br> 
     </form> 
 
 </div>
